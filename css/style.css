@@ -1,0 +1,352 @@
+
+:root {
+    --blue-very-light: #EAF6FF;
+    --blue-light: #BFE3FA;
+    --blue: #7FC4F2;
+    --blue-medium: #3E8FD6;
+    --blue-dark: #1E5A9C;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    background-color: #FFFFFF; 
+}
+
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1600px;
+    height: 100vh;
+    z-index: -1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fondo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.fondo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.700); 
+}
+
+.navbar {
+    width: 100%;
+    background-color: var(--blue-dark);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100; 
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 15px 0;
+}
+
+.menu li {
+    margin: 0 20px;
+}
+
+.menu a {
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--blue-light);
+}
+
+
+#titulo {
+    text-align: center;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 54px); 
+    box-sizing: border-box;
+}
+
+#titulo h1 {
+    font-size: 3.5rem;
+    color: var(--blue-dark);
+    margin-bottom: 20px;
+    color: #ffffff;
+    
+}
+span{
+    color: var(--blue-medium);
+}
+
+#titulo p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+#titulo button.btn-primary {
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+#titulo a.btn {
+    display: inline-block;
+    background-color: var(--blue-medium);
+    color: #FFFFFF;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#titulo a.btn:hover {
+    background-color: var(--blue-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+#productos {
+    text-align: center;
+    padding: 80px 20px 20px;
+    background-color: #FFFFFF; 
+    position: relative;
+    z-index: 1; 
+}
+
+#productos h3 {
+    font-size: 2.5rem;
+    color: var(--blue-dark);
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 4px solid var(--blue);
+    margin-bottom: 10px;
+}
+
+.imagenes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 20px 5% 80px;
+    background-color: #FFFFFF; 
+    position: relative;
+    z-index: 1;
+}
+
+.imagenes > div {
+    background-color: var(--blue-very-light);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.imagenes > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.imagenes img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.imagenes img:hover {
+    transform: scale(1.03);
+}
+
+.imagenes p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--blue-dark);
+    margin: 10px 0 15px;
+}
+
+.imagenes button {
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.imagenes button a {
+    display: block;
+    background-color: var(--blue-medium);
+    color: #FFFFFF;
+    padding: 10px 0;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.imagenes button a:hover {
+    background-color: var(--blue-dark);
+}
+
+
+#contacto {
+    background-color: var(--blue-very-light); 
+    max-width: 800px;
+    margin: 40px auto 80px;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+#contacto h3 {
+    font-size: 2.5rem;
+    color: var(--blue-dark);
+    margin-bottom: 15px;
+}
+
+#contacto p {
+    color: #444444;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contacto input,
+#contacto textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid var(--blue-light);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+#contacto textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#contacto input:focus,
+#contacto textarea:focus {
+    outline: none;
+    border-color: var(--blue-medium); /* #3E8FD6 */
+    box-shadow: 0 0 8px rgba(62, 143, 214, 0.3);
+}
+
+#contacto button[type="submit"] {
+    background-color: var(--blue-dark); /* #1E5A9C */
+    color: #FFFFFF;
+    border: none;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#contacto button[type="submit"]:hover {
+    background-color: var(--blue-medium); /* #3E8FD6 */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+.footer {
+    background-color: var(--blue-dark);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+
+@media (max-width: 992px) {
+    .imagenes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+    }
+    
+    .menu li {
+        margin: 10px 0;
+    }
+    
+    #titulo h1 {
+        font-size: 2.5rem;
+    }
+    
+    .imagenes {
+        grid-template-columns: 1fr;
+        padding: 20px 20px 60px;
+    }
+    
+    #contacto {
+        margin: 40px 20px;
+        padding: 30px 20px;
+    }
+}
